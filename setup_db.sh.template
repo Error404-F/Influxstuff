@@ -1,0 +1,5 @@
+export INFLUX_URL="http://your-influx-server:8086/api/v2"
+export INFLUX_ORGANISATION="ITk"
+export INFLUX_TOKEN="what what what"
+export INFLUX_SETUP="BIRMINGHAM"
+export INFLUX_BUCKET="coldjig"

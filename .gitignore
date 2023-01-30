@@ -1,0 +1,4 @@
+# ITSDAQ test output
+itsdaq-cfg/*/results/*
+itsdaq-cfg/*/ps/*
+itsdaq-cfg/*/data/*

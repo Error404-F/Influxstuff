@@ -1,0 +1,79 @@
+{
+    "version": "1.0",
+    "datasinks":[
+	{
+            "name" : "Console",
+            "sinktype": "ConsoleSink",
+            "column_width": 12
+        }
+    ],
+    "datastreams":[
+	{
+	    "name" : "module",
+	    "sinks": ["Console"]
+	}
+    ],
+    "devices": [
+        {
+            "name": "LV",
+            "hw-type": "PS",
+            "hw-model": "TTIXXXDPPs",
+            "communication": {
+                "protocol": "TextSerialCom",
+                "port": "/dev/ttyCPX400No3",
+		"baudrate": "B9600",
+		"termination": "\n"
+            }
+        },
+        {
+            "name": "HV",
+            "hw-type": "PS",
+            "hw-model": "Keithley24XX",
+            "communication": {
+                "protocol": "TextSerialCom",
+                "port": "/dev/ttyUSB0",
+		"baudrate": "B9600",
+		"termination": "\n"
+            }
+        }
+    ],
+    "channels": [
+        {
+            "name": "Vin",
+            "hw-type": "PS",
+            "device": "LV",
+            "channel": 1
+        },
+        {
+            "name": "nexys",
+            "hw-type": "PS",
+            "device": "LV",
+            "channel": 2
+        },
+        {
+            "name": "HVin",
+            "hw-type": "PS",
+            "device": "HV",
+            "channel": 1
+        }
+    ],
+    "testbenches": [
+        {
+	    "name": "default",
+            "type": "PBv3TBModule",
+	    "fmc" : "0514",
+            "ip": "192.168.222.16",
+            "port": 60003,
+            "pbs": [
+                {
+		    "chuck" :1,
+		    "channel": 5,
+                    "aefuse": 4199751,
+                    "idpads": 0,
+                    "commid": 0,
+		    "config": "config_0x00401547.json"
+                }
+	    ]
+        }
+    ]
+}

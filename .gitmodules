@@ -1,0 +1,6 @@
+[submodule "itsdaq-sw"]
+	path = itsdaq-sw
+	url = https://gitlab.cern.ch/atlas-itk-strips-daq/itsdaq-sw.git
+[submodule "powertools"]
+	path = powertools
+	url = https://gitlab.cern.ch/berkeleylab/labremote-apps/powertools.git
