@@ -1,0 +1,9 @@
+{
+   "hv_supplies": [
+   {
+     "psName": "/dev/serial/by-id/usb-Arduino_LLC_Arduino_Leonardo-if00",
+     "modName": "Module 0",
+     "deviceType": 2
+   }
+]
+}

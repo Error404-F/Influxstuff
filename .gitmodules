@@ -4,3 +4,6 @@
 [submodule "powertools"]
 	path = powertools
 	url = https://gitlab.cern.ch/berkeleylab/labremote-apps/powertools.git
+[submodule "production_database_scripts"]
+	path = production_database_scripts
+	url = https://gitlab.cern.ch/atlas-itk/sw/db/production_database_scripts.git

@@ -1,0 +1,48 @@
+	ST Configuration file: example 26.07.2002
+	=========================================
+
+        This defines the mapping for connection to a module
+        Lines that don't start "Module" are ignored
+        After the Module string there are a series of fields
+
+	id         ID of module in map
+        pr         This module is present (usually 1)
+        ac         Active in scans
+	LV cr      Crate in which to find LV 
+	LV ch      LV Channel within the crate
+ 	HV id      ID of HV card?
+	HV ch      Channel within HV card
+        SLOG id    ID of slog to use for transmission
+        SLOG clk0  Channel for clock 0    (data clock)
+        SLOG clk1  Channel for clock 1    (BC clock)
+        SLOG com0  Channel for command 0  (Command)
+        SLOG com1  Channel for command 1  (L1)
+        SLOG com2  Channel for command 2  (Reset)
+        Mus id     ID of MuSTARD to use for data reception
+        Mus s0     Stream in MuSTARD for column 0
+        Mus s1     Stream in MuSTARD for column 1
+        Mus d0     Delay in MuSTARD for column 0
+        Mus d1     Delay in MuSTARD for column 1
+	FileName   Base of filename to find individual configuration (see below)
+	DevType    Type of device
+
+        The module configuration is read from a file in the following order
+          sctdaq/config/$filename.det
+          sctdaq/config/default$id.det
+          sctdaq/config/default.det
+
+# The following line configures the ethernet connection to the HSIO board.
+# To use, remove the "#  " and change the number in {} to match the device
+# in the pcap error report on boot.
+#  DAQ pcap {3D38AF36-47F3-412E-8BD8-6A0A6FDDCD04} e0:dd:cc:bb:aa:00
+# The default on Linux is the equivalent of:
+DAQ udp 192.168.222.16 60001,60001
+
+        DETECTOR  LV     HV     SLOG                    MuSTARD         Module
+        id pr ac  cr ch  id ch  id ck0 ck1 cm0 cm1 cm2  id s0 s1 d0 d1  Filename       Device Type
+        --------------------------------------------------------------------------------
+
+# List of "modules"
+# Module  0   1   1   0   42  -1  50  50  SN20USBHX2001092 20USBHX2001092
+# Module  1   1   1   0   40  -1  50  50  SN20USBHY0000405 20USBHY0000405
+
