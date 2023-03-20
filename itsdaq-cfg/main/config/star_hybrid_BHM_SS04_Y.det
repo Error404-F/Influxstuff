@@ -1,0 +1,127 @@
+### https://itkpd-test.unicorncollege.cz/componentView?code=20USBHY0000200 
+## Previously   BHM_P2C_Y_Pos0
+Module : Chipset
+           8
+
+# Speed of readout from HCC
+Speed 320
+
+#Register 17:
+#HCC 15
+###BHAM-P2, Addressing: f0004a27
+#HCC 5
+###BHAM-P2, Addressing: 50004a27
+HCC 5 0x4a37
+
+
+#   R32        R33        R34        R35
+# Dennis "32 = 02900010"
+# 33/34 input timing (randomly pick 4 for all chips)
+0x02200000 0x44444444 0x00000444 0x00ff3b05
+#0x02930000 0x00000000 0x00000000 0x00ff3b05
+#   R36        R37        R38        R39
+    0x00000000 0x00000004 0x0fffffff 0x00000014
+#   R40        R41        R42        R43
+#    0x000003ff 0x00020001 0x00020001 0x00000000
+# Force non-decoded mode
+    0x000003ff 0x00010001 0x00010001 0x00000000
+# Disable chip
+#    0x000003fd 0x00010001 0x00010001 0x00000000
+#   R44        R45        R46        R47
+    0x0000018e 0x00710003 0x00710003 0x00000000
+#   R48
+    0x00406600
+
+
+# So, IDs backwards in two different ways...
+#  Channel  ID
+#  0        0
+#  1        1
+#  2        2
+#  3        3
+#  4        4
+#  5        5
+#  6        6
+#  7        7
+#  8        8
+#  9        9
+
+
+Chip 9 :  Act. Comp. T_range Mask_r Drive PR LP LCB_Threshold
+            1    0     0       0      4     1  1  134
+Delay: Delay DelStep VThr VCal CalPol Latency BCOffset MaxCluster
+        19    3       13   0    0      3       65       2
+Bias : BVREF BIREF B8REF COMBIAS BIFEED BIPRE ADC_BIAS LDOD LDOA
+        13    15    13    16      15     16    12       12   14
+				
+
+Chip 8 :  Act. Comp. T_range Mask_r Drive PR LP LCB_Threshold
+            1    0     0       0      4     1  1  134
+Delay: Delay DelStep VThr VCal CalPol Latency BCOffset MaxCluster
+        18    3       13   0    0      3       65       2
+Bias : BVREF BIREF B8REF COMBIAS BIFEED BIPRE ADC_BIAS LDOD LDOA
+        13    15    13    16      15     16    12       12   14				
+				
+
+Chip 7 :  Act. Comp. T_range Mask_r Drive PR LP LCB_Threshold
+            1    0     0       0      4     1  1  134
+Delay: Delay DelStep VThr VCal CalPol Latency BCOffset MaxCluster
+        20    3       13   0    0      3       65       2
+Bias : BVREF BIREF B8REF COMBIAS BIFEED BIPRE ADC_BIAS LDOD LDOA
+        13    15    13    16      15     16    12       12   14
+
+
+Chip 6 :  Act. Comp. T_range Mask_r Drive PR LP LCB_Threshold
+            1    0     0       0      4     1  1  134
+Delay: Delay DelStep VThr VCal CalPol Latency BCOffset MaxCluster
+        20    3       13   0    0      3       65       2
+Bias : BVREF BIREF B8REF COMBIAS BIFEED BIPRE ADC_BIAS LDOD LDOA
+        13    15    13    16      15     16    12       12   14
+
+
+Chip 5 :  Act. Comp. T_range Mask_r Drive PR LP LCB_Threshold
+            1    0     0       0      4     1  1  134
+Delay: Delay DelStep VThr VCal CalPol Latency BCOffset MaxCluster
+        23    3       13   0    0      3       65       2
+Bias : BVREF BIREF B8REF COMBIAS BIFEED BIPRE ADC_BIAS LDOD LDOA
+        13    15    13    16      15     16    12       12   14
+
+
+Chip 4 :  Act. Comp. T_range Mask_r Drive PR LP LCB_Threshold
+            1    0     0       0      4     1  1  134
+Delay: Delay DelStep VThr VCal CalPol Latency BCOffset MaxCluster
+        21    3       13   0    0      3       65       2
+Bias : BVREF BIREF B8REF COMBIAS BIFEED BIPRE ADC_BIAS LDOD LDOA
+        13    15    13    16      15     16    12       12   14
+				
+				
+Chip 3 :  Act. Comp. T_range Mask_r Drive PR LP LCB_Threshold
+            1    0     0       0      4     1  1  134
+Delay: Delay DelStep VThr VCal CalPol Latency BCOffset MaxCluster
+        20    3       13   0    0      3       65       2
+Bias : BVREF BIREF B8REF COMBIAS BIFEED BIPRE ADC_BIAS LDOD LDOA
+        13    15    13    16      15     16    12       12   14				
+				
+
+Chip 2 :  Act. Comp. T_range Mask_r Drive PR LP LCB_Threshold
+            1    0     0       0      4     1  1  134
+Delay: Delay DelStep VThr VCal CalPol Latency BCOffset MaxCluster
+        21    3       13   12    0      3       65       2
+Bias : BVREF BIREF B8REF COMBIAS BIFEED BIPRE ADC_BIAS LDOD LDOA
+        13    15    13    16      15     16    12       12   14
+
+
+Chip 1 :  Act. Comp. T_range Mask_r Drive PR LP LCB_Threshold
+            1    0     0       0      4     1  1  134
+Delay: Delay DelStep VThr VCal CalPol Latency BCOffset MaxCluster
+        21    3       13   12    0      3       65       2
+Bias : BVREF BIREF B8REF COMBIAS BIFEED BIPRE ADC_BIAS LDOD LDOA
+        13    15    13    16      15     16    12       12   14
+				
+				
+Chip 0 :  Act. Comp. T_range Mask_r Drive PR LP LCB_Threshold
+            1    0     0       0      4     1  1  134
+Delay: Delay DelStep VThr VCal CalPol Latency BCOffset MaxCluster
+        21    3       13   0    0      3       65       2
+Bias : BVREF BIREF B8REF COMBIAS BIFEED BIPRE ADC_BIAS LDOD LDOA
+        13    15    13    16      15     16    12       12   14
