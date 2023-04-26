@@ -1,4 +1,5 @@
 ## https://itkpd-test.unicorncollege.cz/componentView?code=20USBHX2000577 
+## BHM_SS04_X
 ## Previously BHM_P2C_X_Pos1
 ##Previuosly star_hybrid_BHM_P2_X_Pos5##
 Module : Chipset
@@ -8,11 +9,11 @@ Module : Chipset
 Speed 320
 
 #Register 17:
-#HCC 15
+HCC 15 auto
 ###BHAM-P2, Addressing: f0004a28
 #HCC 6
 ###BHAM-P2, Addressing: 60004a28
-HCC 6 0x4a43
+#HCC 6 0x4a34
 
 
 
@@ -120,6 +121,3 @@ Delay: Delay DelStep VThr VCal CalPol Latency BCOffset MaxCluster
         19    3       13   0    0      3       65       2
 Bias : BVREF BIREF B8REF COMBIAS BIFEED BIPRE ADC_BIAS LDOD LDOA
         13    15    13    16      15     16    12       12   14
-
-
-
