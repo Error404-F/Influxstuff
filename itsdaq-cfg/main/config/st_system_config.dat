@@ -43,10 +43,8 @@ DAQ udp 192.168.222.16 60002,60002
         id pr ac  cr ch  id ch  id ck0 ck1 cm0 cm1 cm2  id s0 s1 d0 d1  Filename       Device Type
         --------------------------------------------------------------------------------
 
-# Chuck 2
-Module  0   1   1   0   18  -1  50  50  star_hybrid_BHM_SS04_X star_hybrid_BHM_SS04_X
-Module  1   1   1   0   16  -1  50  50  star_hybrid_BHM_SS04_Y star_hybrid_BHM_SS04_Y
-
-# # Chuck 3
-# Module  0   1   1   0   26  -1  50  50  star_hybrid_BHM_SS04_X star_hybrid_BHM_SS04_X
-# Module  1   1   1   0   24  -1  50  50  star_hybrid_BHM_SS04_Y star_hybrid_BHM_SS04_Y
+# List of "modules"
+Module  0   1   1   0   16  -1  50  50  SN20USBHX2001218 20USBHX2001218
+Module  1   1   1   0   24  -1  50  50  SN20USBHX2001216 20USBHX2001216
+Module  2   1   1   0   32  -1  50  50  SN20USBHX2001217 20USBHX2001217
+Module  3   1   1   0   40  -1  50  50  SN20USBHX2001220 20USBHX2001220
