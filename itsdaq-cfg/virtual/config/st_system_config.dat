@@ -1,0 +1,6 @@
+# Default test config, for instance used in job_run_test
+
+DAQ sim HCCStar
+
+# Default thing
+Module  1  1  1   -1  0  -1  0   0   4   5   4   7   5   0  4  5 22 22  test_1 Test
