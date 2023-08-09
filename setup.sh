@@ -13,6 +13,7 @@ export LD_LIBRARY_PATH=${WORKDIR}/powertools/build/lib:${LD_LIBRARY_PATH}
 export SCTDAQ_ROOT=${WORKDIR}/itsdaq-sw
 export SCTDAQ_VAR=${WORKDIR}/itsdaq-cfg/${SETUP}
 export SCTDB_USER=FU
+export ITSDAQ_LOCATION=BHAM_COLDJIG
 
 # Database
 if [ -e ${WORKDIR}/setup_db.sh ]; then
