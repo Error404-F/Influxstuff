@@ -1,7 +1,7 @@
 {
     "lv_supplies": [
         {
-            "psName": "/dev/ttyCPX400No3",
+            "psName": "/dev/serial/by-id/usb-FTDI_UT232R_FT1MBHEM-if00-port0",
             "modName": "Module 0-9",
             "channel": 1
         }
