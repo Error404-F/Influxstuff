@@ -1,4 +1,3 @@
-source setup_lcg_root.sh
 
 SETUP=main
 if [ ${#} == 1 ]; then
@@ -6,6 +5,8 @@ if [ ${#} == 1 ]; then
 fi
 
 export WORKDIR=$(realpath $(dirname ${BASH_SOURCE[0]}))
+
+source ${WORKDIR}/setup_lcg_root.sh
 
 # Powertool utilities
 export PATH=${WORKDIR}/powertools/build/bin:${HOME}/powertools/scripts:${PATH}
