@@ -37,12 +37,12 @@
 #  DAQ pcap {3D38AF36-47F3-412E-8BD8-6A0A6FDDCD04} e0:dd:cc:bb:aa:00
 # The default on Linux is the equivalent of:
 DAQ udp 192.168.222.16 60001,60001
+DAQ udp 192.168.222.16 60002,60002
 
         DETECTOR  LV     HV     SLOG                    MuSTARD         Module
         id pr ac  cr ch  id ch  id ck0 ck1 cm0 cm1 cm2  id s0 s1 d0 d1  Filename       Device Type
         --------------------------------------------------------------------------------
 
 # List of "modules"
-# Module  0   1   1   0   42  -1  50  50  SN20USBHX2001092 20USBHX2001092
-# Module  1   1   1   0   40  -1  50  50  SN20USBHY0000405 20USBHY0000405
-
+Module  0   1   1   0   18  -1  50  50  SN20USBHX2001081 20USBHX2001081
+Module  1   1   1   0   16  -1  50  50  SN20USBHY0000392 20USBHY0000392

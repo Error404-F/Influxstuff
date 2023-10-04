@@ -4,6 +4,11 @@
             "psName": "/dev/serial/by-id/usb-FTDI_UT232R_FT1MBHEM-if00-port0",
             "modName": "Module 0-9",
             "channel": 1
+        },
+        {
+            "psName": "/dev/serial/by-id/usb-FTDI_UT232R_FT1MBHEM-if00-port0",
+            "modName": "Nexys",
+            "channel": 2
         }
     ],
     "hv_supplies": [

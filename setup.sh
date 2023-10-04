@@ -1,3 +1,5 @@
+source setup_lcg_root.sh
+
 SETUP=main
 if [ ${#} == 1 ]; then
     SETUP=${1}
