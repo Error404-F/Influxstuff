@@ -24,6 +24,7 @@ if __name__=="__main__":
     #steps_to_test = [A, B, C, D, E, F, G, H, I]
     #steps_to_test = [A, B, C, D, E, F, G, H, I]
     steps_to_test = [INITRUN, HON, INITDAQ, INITDCS, IV, HVON, CHAR, HVOFF, HOFF]
+    IV_steps = [HVOFF, IV, HVON]
     
     Type = None
     while Type != "n" and Type != "y":
@@ -50,25 +51,15 @@ if __name__=="__main__":
                     status = influx_class.is_command_complete(start_time, step[0], step[1])
                 print(status["DATA"])
                 if time.time() - IVtime > 3600:
-                    print("HV_OFF Started")
-                    start_time = influx_class.SendCommand(modules, "HV_OFF", "ITSDAQ")
-                    status = None
-                    while status is None:
-                        status = influx_class.is_command_complete(start_time, "IVSCAN", "ITSDAQ")
-                    print(status["DATA"])
-                    print("IVSCAN started")
-                    start_time = influx_class.SendCommand(modules, "IVSCAN", "ITSDAQ")
-                    print(start_time)
-                    status = None
-                    while status is None:
-                        status = influx_class.is_command_complete(start_time, "IVSCAN", "ITSDAQ")
-                    print(status["DATA"])
-                    print("HV_ON Started")
-                    start_time = influx_class.SendCommand(modules, "HV_ON", "ITSDAQ")
-                    status = None
-                    while status is None:
-                        status = influx_class.is_command_complete(start_time, "IVSCAN", "ITSDAQ")
-                    print(status["DATA"])
+                    for IVstep in IV_steps:
+                        print(IVstep[0], 'started')
+                        start_time = influx_class.SendCommand(modules, IVstep[0], IVstep[1])
+                        print(start_time)
+                        status = None
+                        while status is None:
+                            status = influx_class.is_command_complete(start_time, IVstep[0], IVstep[1])
+                        print(status["DATA"])
+                        
                     IVtime = time.time()
                 time.sleep(1200)
             
